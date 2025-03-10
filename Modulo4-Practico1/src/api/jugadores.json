@@ -1,0 +1,30 @@
+[ 
+ {
+    "id": 1,
+    "name": "Leo",
+    "img": "imagen1",
+    "puesto": "Delantero"
+  },
+  {
+    "id": 2,
+    "name": "Dibu",
+    "img": "imagen2",
+    "puesto": "Arquero"
+
+  },
+  {
+    "id": 3,
+    "name": "Rodrigo",
+    "img": "imagen3",
+    "puesto": "Mediocampista"
+  },
+  {
+    "id": 3,
+    "name": "Cuti",
+    "img": "imagen4",
+    "puesto": "Defensor"
+  }
+
+]
+
+  
