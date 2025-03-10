@@ -40,7 +40,7 @@ import React, { useState } from 'react'
 
     const diasFaltantesParaElMundial = () => {
       const diasObtenidosDeLosDiasFaltantes = diaDelMundial>diaActual? diaDelMundial-diaActual : 30-(diaActual-diaDelMundial)
-      const diasObtenidosDeLosMesesFaltantes = mesDelMundial>mesActual? 30*(mesDelMundial-mesActual-1) : 30*(12-(mesActual-mesDelMundial-1)) 
+      const diasObtenidosDeLosMesesFaltantes = mesDelMundial>mesActual? 30*(mesDelMundial-mesActual - 1 - (diaDelMundial>diaActual? 0 : 1)) : 30*(12-(mesActual-mesDelMundial-1)) 
       const diasObtenidosDeLosAniosFaltantes = añoDelMundial>añoActual? 365*(añoDelMundial-añoActual) : 0
       
       return diasObtenidosDeLosDiasFaltantes + diasObtenidosDeLosMesesFaltantes + diasObtenidosDeLosAniosFaltantes
