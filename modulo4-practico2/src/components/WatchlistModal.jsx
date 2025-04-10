@@ -9,7 +9,7 @@ const WatchlistModal = ({ isModalOpen, setIsModalOpen, watchlist, setWatchlist }
   const removerFromWatchlist = (id) => {
     const updatedList = watchlist.filter((movie) => movie.id !== id);
       setWatchlist(updatedList);
-      localStorage.setItem("watchlist", JSON.stringify(updatedList));
+      localStorage.setItem("watchlistLS", JSON.stringify(updatedList));
   }
 
   return (
@@ -26,10 +26,8 @@ const WatchlistModal = ({ isModalOpen, setIsModalOpen, watchlist, setWatchlist }
         <p className='text-cyan-200 justify-center'>Lista de Películas Seleccionadas:</p>
         
         
-        {
-          watchlist.length === 0 ? (
-            <p className='text-white'>No tienes películas seleccionadas</p>
-          ) : (
+        
+        {watchlist.length === 0? (<p className='text-white'>No tienes películas seleccionadas</p>):(
             watchlist.map((movie) => (
               <div className='text-white' key={movie.id}>
                 <p>{movie.name}</p>
@@ -44,8 +42,6 @@ const WatchlistModal = ({ isModalOpen, setIsModalOpen, watchlist, setWatchlist }
         
             ))
           )
-
-
         }
       </div>
       </div>

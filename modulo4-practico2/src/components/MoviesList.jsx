@@ -5,7 +5,7 @@ const MoviesList = ({ watchlist, setWatchlist }) => {
 
   const addToWatchlist = (movie) => {
     setWatchlist([...watchlist, movie]);
-    localStorage.setItem("watchlist", JSON.stringify([...watchlist, movie]));
+    localStorage.setItem("watchlistLS", JSON.stringify([...watchlist, movie]));
   }
 
   return (

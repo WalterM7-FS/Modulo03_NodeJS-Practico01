@@ -8,7 +8,7 @@ function App() {
   const [watchlist, setWatchlist] = useState([])
 
   useEffect(() => {
-    const savedWatchlist = JSON.parse(localStorage.getItem("watchlist"))  
+    const savedWatchlist = JSON.parse(localStorage.getItem("watchlistLS")) || [] 
     setWatchlist(savedWatchlist)
     }, [])
  
